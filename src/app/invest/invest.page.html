@@ -1,0 +1,83 @@
+<ion-header class="dashboard-header" [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="title">
+      Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true" class="content-container">
+
+  <ion-toast trigger="headerAnchor" position="top" positionAnchor="header" message="Hello World!"
+    duration="2000"></ion-toast>
+
+  <div class="equity-container">
+    <div class="equity-label">Total equity</div>
+    <div class="equity-amount">{{ totalEquity() | currency: 'AUD':'symbol-narrow':'1.0-0' }}</div>
+  </div>
+
+  <div class="holdings-container">
+    <div class="holdings-header">Holdings</div>
+
+    <div class="column-headers">
+      <div class="header-stock">Stock</div>
+      <div class="header-price">Price</div>
+      <div class="header-change">Change</div>
+    </div>
+
+    @for (holding of holdings(); track $index) {
+    <app-instrument [variant]="InstrumentVariant.STOCK" [symbol]="holding.symbol" [noOfShares]="holding.shares"
+      [amount]="holding.shares * holding.currentPrice" [percentageChange]="holding.percentageChange"
+      [isPositive]="holding.isPositive">
+    </app-instrument>
+    }
+  </div>
+
+  <div class="trending-stocks-container">
+    <div class="trending-stocks-header">Trending Stocks</div>
+    <div class="trending-stocks-list">
+      @for(trendingStock of trendingStocks.slice(0, 5); track $index) {
+      <app-card [id]="'add-stock-modal-' + $index" [variant]="CardVariant.SUMMARY" [type]="trendingStock.type"
+        [symbol]="trendingStock.symbol" [fullName]="trendingStock.fullName" [logo]="trendingStock.logo"
+        [ask]="trendingStock.ask" [volume]="trendingStock.volume" [marketCap]="trendingStock.marketCap"
+        [low]="trendingStock.low" [high]="trendingStock.high" (cardClick)="onCardClicked($event)"></app-card>
+
+      <ion-modal [trigger]="'add-stock-modal-' + $index" [initialBreakpoint]="0.5" [breakpoints]="[0, 1]">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>{{trendingStock.symbol}} - ${{trendingStock.ask}}</ion-title>
+            </ion-toolbar>
+          </ion-header>
+
+          <ion-content class="ion-padding">
+            <div class="form-container">
+              <ion-item>
+                <ion-label position="stacked">Price</ion-label>
+                <ion-input value="At market" readonly></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="stacked">Amount ($)</ion-label>
+                <ion-input type="number" [(ngModel)]="formAmount" autofocus="true"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="stacked">Shares</ion-label>
+                <ion-input type="number" [(ngModel)]="formShares"></ion-input>
+              </ion-item>
+            </div>
+            <ion-button expand="full" class="ion-margin-top save-button" (click)="onBuy()">
+              Buy
+            </ion-button>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      }
+    </div>
+  </div>
+
+
+</ion-content>

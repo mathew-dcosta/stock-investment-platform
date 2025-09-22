@@ -1,0 +1,22 @@
+<ion-item lines="none" class="instrument-item" [class]="'variant-' + variant">
+  <div class="instrument-layout">
+    <div class="stock-section">
+      <h2 class="symbol">{{ symbol }}</h2>
+      @if (variant === InstrumentVariant.STOCK) {
+      <p class="no-of-shares">{{ noOfShares }} shares</p>
+      } @else if (variant === InstrumentVariant.COMPANY) {
+      <p class="company-name">{{ companyName }}</p>
+      }
+    </div>
+
+    <div class="amount-section">
+      <span class="amount">{{ amount | currency:'AUD':'symbol-narrow':'1.2-2':'en-AU' }}</span>
+    </div>
+
+    @if (variant === InstrumentVariant.STOCK) {
+    <div class="percentage-section">
+      <span class="percentage-box" [class]="percentageClass">{{ formattedPercentage }}</span>
+    </div>
+    }
+  </div>
+</ion-item>

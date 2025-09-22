@@ -1,0 +1,119 @@
+.card-container {
+  border: 0.5px solid var(--ion-color-light-shade, #d7d8da);
+  border-radius: 2px;
+  box-shadow: none;
+
+  &.card-compact {
+    width: 280px;
+  }
+
+  &.card-summary {
+    width: 126px;
+    height: 149px;
+    position: relative;
+
+    .header-summary {
+      padding-bottom: 45px;
+
+      ion-card-title {
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+
+      ion-card-subtitle {
+        margin-top: 1px;
+        line-height: 1.2;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    .summary-price-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 12px 16px;
+
+      .stock-price {
+        margin: 0;
+        font-weight: 700 !important;
+        font-size: 1.1rem !important;
+        color: var(--ion-color-dark);
+      }
+    }
+  }
+}
+
+.card-divider {
+  margin: 0 16px;
+  border: none;
+  height: 1px;
+  background-color: var(--ion-color-light-shade, #d7d8da);
+}
+
+.card-container ion-card-header ion-card-title.stock-price {
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  color: var(--ion-color-dark);
+  margin: 0;
+}
+
+.company-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.badge-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo-type-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px 0 16px;
+}
+
+.logo-symbol-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .symbol-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--ion-color-dark);
+    line-height: 1;
+    margin-top: 6px;
+  }
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+
+  img {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  span {
+    line-height: 1;
+  }
+}

@@ -1,0 +1,49 @@
+<ion-card [class]="'card-container card-' + variant" (click)="onCardClick()">
+  <div class="logo-type-container">
+    <div class="logo-symbol-group">
+      <img class="company-logo" [src]="logo || 'assets/icon/placeholder-company.svg'" [alt]="fullName + ' Logo'" />
+      @if (variant === 'compact') {
+      <span class="symbol-text">{{ symbol }}</span>
+      }
+    </div>
+    <div class="badge-container">
+      <app-badge [type]="type"></app-badge>
+    </div>
+  </div>
+
+  <ion-card-header [class]="'header-' + variant">
+    @if (variant === 'summary') {
+    <ion-card-title>{{ symbol }}</ion-card-title>
+    <ion-card-subtitle>{{ fullName }}</ion-card-subtitle>
+    } @else {
+    <ion-card-title class="stock-price">{{ ask | currency: 'AUD':'symbol-narrow':'1.2-2' }}</ion-card-title>
+    <ion-card-subtitle>{{ symbol }} &bull; {{ fullName }}</ion-card-subtitle>
+    }
+  </ion-card-header>
+
+  @if (variant === 'summary') {
+  <ion-card-content class="summary-price-container">
+    <ion-card-title class="stock-price">{{ ask | currency: 'AUD':'symbol-narrow':'1.2-2' }}</ion-card-title>
+  </ion-card-content>
+  }
+
+  @if (variant === 'detailed') {
+  <hr class="card-divider">
+
+  <ion-card-content class="stats-container">
+    <div class="stat-item">
+      <img src="assets/icon/circle-dollar.svg" class="circle-dollar" alt="Volume Icon" />
+      <span>{{ formatLargeNumber(volume) }}</span>
+    </div>
+    <div class="stat-item">
+      <img src="assets/icon/target.svg" class="circle-dollar" alt="Market Cap" />
+      <span>{{ formatLargeNumber(marketCap) }}</span>
+    </div>
+    <div class="stat-item">
+      <img src="assets/icon/square-dollar.svg" class="circle-dollar" alt="Price Range" />
+      <span>{{ priceRange }}</span>
+    </div>
+  </ion-card-content>
+  }
+
+</ion-card>

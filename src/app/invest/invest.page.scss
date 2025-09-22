@@ -1,0 +1,97 @@
+.dashboard-header {
+  box-shadow: none;
+
+  .title {
+    font-weight: bold;
+  }
+}
+
+.equity-container {
+  .equity-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .equity-amount {
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
+
+.holdings-container {
+  margin-top: 24px;
+
+  .holdings-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+
+  .column-headers {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0;
+    margin-bottom: 5px;
+
+    .header-stock {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ion-color-medium);
+      letter-spacing: 0.5px;
+    }
+
+    .header-price {
+      margin-right: 32px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ion-color-medium);
+      letter-spacing: 0.5px;
+    }
+
+    .header-change {
+      width: 60px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ion-color-medium);
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+.trending-stocks-container {
+  margin-top: 24px;
+
+  .trending-stocks-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+
+  .trending-stocks-list {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 8px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.form-container {
+  min-height: 33vh;
+  max-height: 50vh;
+}
+
+.save-button {
+  --background: #000000;
+  --background-activated: #333333;
+  --background-hover: #222222;
+  --color: #ffffff;
+  --border-radius: 8px;
+  font-weight: 600;
+}

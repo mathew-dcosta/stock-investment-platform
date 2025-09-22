@@ -1,0 +1,79 @@
+.instrument-item {
+  --padding-start: 0px;
+  --padding-end: 0px;
+  --inner-padding-end: 0;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+}
+
+.instrument-layout {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .stock-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .symbol {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--ion-color-dark);
+      margin: 0;
+    }
+
+    .no-of-shares {
+      font-size: 0.85rem;
+      color: var(--ion-color-medium);
+      margin: 2px 0 0 0;
+    }
+
+    .company-name {
+      font-size: 0.85rem;
+      color: var(--ion-color-medium);
+      margin: 2px 0 0 0;
+    }
+  }
+
+  .amount-section {
+    margin-right: 15px;
+    .amount {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--ion-color-dark);
+    }
+  }
+
+  .percentage-section {
+    display: flex;
+    justify-content: flex-end;
+
+    .percentage-box {
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 4px 8px;
+      border-radius: 6px;
+      min-width: 80px;
+      height: 28px;
+      text-align: center;
+
+      &.positive {
+        color: white;
+        background-color: var(--ion-color-success-shade);
+      }
+
+      &.negative {
+        color: white;
+        background-color: var(--ion-color-danger);
+      }
+    }
+  }
+}
+
+.variant-company {
+  .amount-section {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}

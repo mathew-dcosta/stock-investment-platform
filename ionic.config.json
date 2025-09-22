@@ -1,0 +1,7 @@
+{
+  "name": "investment-platform",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

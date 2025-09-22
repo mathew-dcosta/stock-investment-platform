@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-searchbar show-cancel-button="focus" placeholder="Search by symbol"></ion-searchbar>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="content-container">
+  <div>Recently searched</div>
+  <div class="discover-container">
+    @for (recent of recentlySearched; track $index) {
+    <app-instrument [variant]="InstrumentVariant.COMPANY" [symbol]="recent.symbol" [companyName]="recent.fullName"
+      [amount]="recent.amount">
+    </app-instrument>
+    }
+  </div>
+</ion-content>

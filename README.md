@@ -1,6 +1,6 @@
 # Investment Platform
 
-A modern investment platform built with Angular and Ionic for portfolio management and stock discovery.
+An investment platform built with Angular and Ionic for portfolio management and stock search.
 
 ## Implementation Status
 
@@ -13,9 +13,9 @@ A modern investment platform built with Angular and Ionic for portfolio manageme
 
 ### Known Limitations
 
-- **Animated Button**: Due to time constratints, animation button effects not implemented
+- **Animated Button**: Due to time constraints, animation button effects not implemented
 - **Search Page**: Your organization's data cannot be pasted here, currently shows hardcoded data (not functional search)
-- **Top 3 volume stockss**: Has not been implemented, but the common component is done
+- **Top 3 volume stocks**: Has not been implemented, but the common component is done
 - **Unit Tests**: Only basic test implemented for a couple of methods.
 - **UI Styling**: May not perfectly match original designs
 - **Updating of % price change**: Will not update when a new buy is triggered
@@ -52,7 +52,12 @@ A modern investment platform built with Angular and Ionic for portfolio manageme
 
 - The project uses `json-server` for mock APIs and `concurrently` to run both the application and mock server together.
 - This will start both the Angular development server and the json-server mock API concurrently.
+
+## Stackblitz
+
+- https://stackblitz.com/~/github.com/mathew-dcosta/stock-investment-platform
 - **Note**: This project will not work with StackBlitz as `json-server` doesn't work well having other ports running in parallel.
+- Kindly use the bash command below for running it locally.
 
 ```bash
 npm install

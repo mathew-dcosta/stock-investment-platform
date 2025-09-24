@@ -14,12 +14,14 @@ An investment platform built with Angular and Ionic for portfolio management and
 ### Known Limitations
 
 - **Animated Button**: Due to time constraints, animation button effects not implemented
-- **Search Page**: Your organization's data cannot be pasted here, currently shows hardcoded data (not functional search)
-- **Top 3 volume stocks**: Has not been implemented, but the common component is done
+- **Search Page**: Due to time constraints, only hardcoded data is used. If time was not an issue, would've added an endpoint for search and shown the data appropriately.
+- **Top 3 volume stocks**: Due to time constraints, only hardcoded data is used. If time was not an issue, the data would've been fetched and displayed similar to trending stocks.
 - **Unit Tests**: Only basic test implemented for a couple of methods.
 - **UI Styling**: May not perfectly match original designs
 - **Updating of % price change**: Will not update when a new buy is triggered
 - **Duplicate Stock Purchases**: If the same stock is added multiple times, it doesn't combine to a single line
+- **Horizontal Scrolling on desktop**: Desktop horizontal scrolling requires mobile viewport emulation in browser dev tools for optimal experience. Scrollbars are intentionally hidden on mobile to maintain clean UX as per design requirements.
+- **State Management / Data Persistence**: Implements BehaviorSubject for in-memory state management. Data resets on page refresh by design. Session storage could've also been used for the data persistence. Ideally would require API calls to persist data on the server.
 
 ## Technical Assumptions
 
@@ -48,15 +50,9 @@ An investment platform built with Angular and Ionic for portfolio management and
 - Users can view their portfolio holdings on the main dashboard
 - Stock purchasing is triggered through the trending stocks section
 
-## Setup
-
-- The project uses `json-server` for mock APIs and `concurrently` to run both the application and mock server together.
-- This will start both the Angular development server and the json-server mock API concurrently.
-
 ## Stackblitz
 
 - https://stackblitz.com/~/github.com/mathew-dcosta/stock-investment-platform
-- **Note**: This project will not work with StackBlitz as `json-server` doesn't work well having other ports running in parallel.
 - Kindly use the bash command below for running it locally.
 
 ```bash

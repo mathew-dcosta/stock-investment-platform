@@ -14,4 +14,18 @@
     </app-instrument>
     }
   </div>
+
+
+
+  <div class="featured-stock-header">Top 3 Volume Stocks</div>
+  <div class="featured-stock-container">
+    @for(featuredStock of featuredStocks; track $index) {
+
+    <app-card [variant]="CardVariant.DETAILED" [type]="featuredStock.type" [symbol]="featuredStock.symbol"
+      [fullName]="featuredStock.fullName" [logo]="featuredStock.logo" [ask]="featuredStock.ask"
+      [volume]="featuredStock.volume" [marketCap]="featuredStock.marketCap" [open]="featuredStock.open"
+      [close]="featuredStock.close" [high]="featuredStock.high" [low]="featuredStock.low">
+    </app-card>
+    }
+  </div>
 </ion-content>

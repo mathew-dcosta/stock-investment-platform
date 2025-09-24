@@ -90,6 +90,11 @@
     display: flex;
     overflow-x: auto;
     padding-bottom: 8px;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
 
     &::-webkit-scrollbar {
       display: none;

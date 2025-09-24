@@ -20,7 +20,7 @@ An investment platform built with Angular and Ionic for portfolio management and
 - **UI Styling**: May not perfectly match original designs
 - **Updating of % price change**: Will not update when a new buy is triggered
 - **Duplicate Stock Purchases**: If the same stock is added multiple times, it doesn't combine to a single line
-- **Horizontal Scrolling on desktop**: Desktop horizontal scrolling requires mobile viewport emulation in browser dev tools for optimal experience. Scrollbars are intentionally hidden on mobile to maintain clean UX as per design requirements.
+- **Horizontal Scrolling on desktop**: Desktop horizontal scrolling requires mobile viewport emulation in browser dev tools for optimal experience. Scrollbars are intentionally hidden on mobile to maintain clean UX as per design requirements. Horizontal mouse scrolls would work.
 - **State Management / Data Persistence**: Implements BehaviorSubject for in-memory state management. Data resets on page refresh by design. Session storage could've also been used for the data persistence. Ideally would require API calls to persist data on the server.
 
 ## Technical Assumptions

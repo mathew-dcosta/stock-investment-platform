@@ -10,6 +10,7 @@ An investment platform built with Angular and Ionic for portfolio management and
 - Stock purchasing functionality
 - Use of Rxjs
 - All the common components and it's variations
+- Added edge cases
 
 ### Known Limitations
 

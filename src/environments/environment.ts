@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3001',
+  // Removed apiUrl as we're now using local mock data instead of json-server
+  useMockData: true,
 };
 
 /*

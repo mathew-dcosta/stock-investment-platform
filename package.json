@@ -5,7 +5,7 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"npm run json-server:combined\" \"ionic serve\"",
+    "start": "ng serve",
     "json-server:combined": "node json-server/combine.js && json-server --watch json-server/combined.json --port 3001",
     "json-server:pricing": "json-server --watch json-server/pricing.json --port 3001",
     "json-server:details": "json-server --watch json-server/details.json --port 3002",

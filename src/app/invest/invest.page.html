@@ -18,6 +18,12 @@
     <div class="equity-amount">{{ totalEquity() | currency: 'AUD':'symbol-narrow':'1.0-0' }}</div>
   </div>
 
+  @if (hasError()) {
+  <div class="error-container">
+    <div class="error-message">{{ errorMessage() }}</div>
+  </div>
+  }
+
   <div class="holdings-container">
     <div class="holdings-header">Holdings</div>
 

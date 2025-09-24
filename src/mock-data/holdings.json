@@ -1,0 +1,28 @@
+{
+  "holdings": [
+    {
+      "id": "holding-7f8a9b2c-3d4e-5f6g-7h8i-9j0k1l2m3n4o",
+      "userId": "JohnDoe2025",
+      "symbol": "NVDA",
+      "shares": 3.2291,
+      "purchasePrice": 750.0,
+      "purchaseDate": "20-08-2025"
+    },
+    {
+      "id": "holding-1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "userId": "JohnDoe2025",
+      "symbol": "GOOGL",
+      "shares": 1.3036,
+      "purchasePrice": 1300.0,
+      "purchaseDate": "20-07-2025"
+    },
+    {
+      "id": "holding-9x8y7z6a-5b4c-3d2e-1f0g-9h8i7j6k5l4m",
+      "userId": "JohnDoe2025",
+      "symbol": "ABNB",
+      "shares": 0.16,
+      "purchasePrice": 900.0,
+      "purchaseDate": "20-06-2025"
+    }
+  ]
+}
